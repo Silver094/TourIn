@@ -1,0 +1,73 @@
+.carousel-image-container {
+  position: relative;
+  overflow: hidden;
+  /* Default height for larger screens */
+  height: 600px; /* Adjust as needed */
+}
+
+/* Ensure the image covers the container properly */
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .carousel-image-container {
+    height: 450px; /* Adjust for medium-sized screens */
+  }
+}
+
+@media (max-width: 992px) {
+  .carousel-image-container {
+    height: 400px; /* Adjust for tablets and smaller devices */
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-image-container {
+    height: 300px; /* Adjust for mobile devices */
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel-image-container {
+    height: 300px; /* Adjust for very small screens */
+  }
+}
+
+/* Floating and bold text styling */
+.carousel-caption {
+  position: absolute;
+  bottom: 20%;
+  left: 5%;
+  right: 5%;
+  text-align: center;
+  color: #fff; /* Ensure text is readable on various backgrounds */
+  z-index: 10; /* Make sure the caption appears above the image */
+  text-shadow: 2px 2px 4px rgba(240, 211, 255, 0.7); /* Add shadow to text for better visibility */
+}
+
+.creative-caption {
+  animation: float 3s ease-in-out infinite;
+}
+
+.bold-text {
+  font-weight: bold;
+  font-size: 2rem; /* Adjust as needed */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add shadow to text for better visibility */
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
